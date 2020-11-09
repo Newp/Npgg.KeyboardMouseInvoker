@@ -5,24 +5,16 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Npgg.VirtualKeyboard
+namespace Npgg
 {
 
-    public enum KeyboardAction : uint
-    {
-        KeyDown = 0x00,
-        KeyUp = 0x02,
-    }
-
-    
-
-    public static class VirtualKeyboard
+    public static class Keyboard
     {
 
         [DllImport("user32.dll")]
         static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, int dwExtraInfo);
 
-        public static async Task KeyPress(ushort inputTerm, params VirtualKeys[] keys)
+        public static async Task KeyPress(ushort inputTerm, params KeyboardKeys[] keys)
         {
             foreach (var key in keys)
             {
@@ -32,7 +24,7 @@ namespace Npgg.VirtualKeyboard
             }
         }
 
-        public static async Task MultiKeyPress(ushort inputTerm, params VirtualKeys[] keys)
+        public static async Task MultiKeyPress(ushort inputTerm, params KeyboardKeys[] keys)
         {
             foreach (var key in keys)
             {
@@ -49,12 +41,12 @@ namespace Npgg.VirtualKeyboard
         }
 
 
-        public static void KeyDown(VirtualKeys key)
+        public static void KeyDown(KeyboardKeys key)
         {
             keybd_event((byte)key, 0, (uint)KeyboardAction.KeyDown, 0);
         }
 
-        public static void KeyUp(VirtualKeys key)
+        public static void KeyUp(KeyboardKeys key)
         {
             keybd_event((byte)key, 0, (uint)KeyboardAction.KeyUp, 0);
         }

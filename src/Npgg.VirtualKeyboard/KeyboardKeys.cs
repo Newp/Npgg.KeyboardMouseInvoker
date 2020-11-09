@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Npgg.VirtualKeyboard
+namespace Npgg
 {
-    public enum VirtualKeys : byte
+    public enum KeyboardAction : uint
+    {
+        KeyDown = 0x00,
+        KeyUp = 0x02,
+    }
+
+    public enum KeyboardKeys : byte
     {
         LeftButton = 0x01,
         RightButton = 0x02,
