@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Npgg.VirtualKeyboard\Npgg.KeyboardMouseInvoker.csproj" />
+    <ProjectReference Include="..\Npgg.KeyboardMouseInvoker\Npgg.KeyboardMouseInvoker.csproj" />
   </ItemGroup>
 
 </Project>

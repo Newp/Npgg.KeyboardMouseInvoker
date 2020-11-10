@@ -10,17 +10,22 @@ namespace Example
     {
         static async Task Main()
         {
+            await Keyboard.MultiKeyPress(30, KeyboardKeys.LeftButton);
+
             //await Keyboard.KeyPress(20, KeyboardKeys.A, KeyboardKeys.B, KeyboardKeys.C); // PRESS A,B,C
 
             Console.WriteLine("Hello World!");
 
             Mouse.SetPosition(100, 100);
 
-            for(int i =0;i<100;i++)
+            Mouse.LeftDown();
+            for (int i =0;i<100;i++)
             {
                 Mouse.MovePosition(2, 2);
                 await Task.Delay(5);
             }
+            Mouse.LeftUp();
+            Keyboard.KeyUp(KeyboardKeys.LeftButton);
         }
         
         static async Task AltTab()=> await Keyboard.MultiKeyPress(30, KeyboardKeys.Alt, KeyboardKeys.Tab);

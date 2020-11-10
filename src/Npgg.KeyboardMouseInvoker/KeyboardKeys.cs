@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Npgg
+namespace Npgg.KeyboardMouseInvoker
 {
     public enum KeyboardAction : uint
     {
