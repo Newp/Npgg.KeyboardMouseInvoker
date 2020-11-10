@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Runtime.ExceptionServices;
 using System.Threading.Tasks;
 using Npgg;
+using Npgg.KeyboardMouseInvoker;
 
 namespace Example
 {
@@ -8,9 +10,17 @@ namespace Example
     {
         static async Task Main()
         {
-            await Keyboard.KeyPress(20, KeyboardKeys.A, KeyboardKeys.B, KeyboardKeys.C); // PRESS A,B,C
+            //await Keyboard.KeyPress(20, KeyboardKeys.A, KeyboardKeys.B, KeyboardKeys.C); // PRESS A,B,C
 
             Console.WriteLine("Hello World!");
+
+            Mouse.SetPosition(100, 100);
+
+            for(int i =0;i<100;i++)
+            {
+                Mouse.MovePosition(2, 2);
+                await Task.Delay(5);
+            }
         }
         
         static async Task AltTab()=> await Keyboard.MultiKeyPress(30, KeyboardKeys.Alt, KeyboardKeys.Tab);
