@@ -60,7 +60,9 @@ namespace Npgg.KeyboardMouseInvoker
         Space = 0x20,
         /// <summary></summary>
         Prior = 0x21,
+        PageUp = 0x21,
         /// <summary></summary>
+        PageDown = 0x22,
         Next = 0x22,
         /// <summary></summary>
         End = 0x23,
@@ -82,6 +84,7 @@ namespace Npgg.KeyboardMouseInvoker
         Execute = 0x2B,
         /// <summary></summary>
         Snapshot = 0x2C,
+        PrintScreen = 0x2C,
         /// <summary></summary>
         Insert = 0x2D,
         /// <summary></summary>
@@ -89,25 +92,25 @@ namespace Npgg.KeyboardMouseInvoker
         /// <summary></summary>
         Help = 0x2F,
         /// <summary></summary>
-        N0 = 0x30,
+        Number0 = 0x30,
         /// <summary></summary>
-        N1 = 0x31,
+        Number1 = 0x31,
         /// <summary></summary>
-        N2 = 0x32,
+        Number2 = 0x32,
         /// <summary></summary>
-        N3 = 0x33,
+        Number3 = 0x33,
         /// <summary></summary>
-        N4 = 0x34,
+        Number4 = 0x34,
         /// <summary></summary>
-        N5 = 0x35,
+        Number5 = 0x35,
         /// <summary></summary>
-        N6 = 0x36,
+        Number6 = 0x36,
         /// <summary></summary>
-        N7 = 0x37,
+        Number7 = 0x37,
         /// <summary></summary>
-        N8 = 0x38,
+        Number8 = 0x38,
         /// <summary></summary>
-        N9 = 0x39,
+        Number9 = 0x39,
         /// <summary></summary>
         A = 0x41,
         /// <summary></summary>
